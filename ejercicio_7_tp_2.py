@@ -14,10 +14,8 @@ meses_cant = int(input("Ingrese el plazo de su inversión, en meses: "))
 while meses_cant <= 0:
     meses_cant = int(input("Ingrese el plazo de su inversión, en meses: "))
 
-# Se asume interés compuesto
-# Referencias:
-# https://es.wikipedia.org/wiki/Inter%C3%A9s_compuesto
-capital_final = capital_inicial * (1 + TASA_INTERES) ** meses_cant
-interes = round(capital_final - capital_inicial, 2)
+# Se asume interés simple
+
+interes = round(capital_inicial * (TASA_INTERES)* meses_cant)
 
 print("EL interés generado por su capital en", meses_cant, "meses es:", interes)
